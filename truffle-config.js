@@ -9,7 +9,8 @@ const mnemonic = fs.readFileSync(".secret").toString().trim();
 module.exports = {
   networks: {
     develop: {
-      port: 8545
+      port: 8545,
+      network_id: "1337",
     },
     goerli: {
       //https://twitter.com/Mudit__Gupta/status/1378979226590670852
