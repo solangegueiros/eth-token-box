@@ -16,14 +16,17 @@ module.exports = {
       //https://twitter.com/Mudit__Gupta/status/1378979226590670852
       provider: () => new HDWalletProvider({
         mnemonic: { phrase: mnemonic },
-        providerOrUrl: 'https://rpc.goerli.mudit.blog/',
+        //https://twitter.com/Mudit__Gupta/status/1378979226590670852
+        //providerOrUrl: 'https://rpc.goerli.mudit.blog/',
+        providerOrUrl: 'https://goerli-rpc.mudit.blog/',  //Only for students
         numberOfAddresses: 10,
-        pollingInterval: 40e3 
+        ollingInterval: 10e3,
+        chainId: 5,
       }),
       network_id: 5,
       gasPrice: 3e9,
       networkCheckTimeout: 36e5, //1h = 36e5, 10min = 6e5
-      deploymentPollingInterval: 40e3,  //15s = 15e3, default is 4e3
+      deploymentPollingInterval: 10e3,  //10s = 10e3, default is 4e3
       skipDryRun: true,
       //confirmations: 2,
       timeoutBlocks: 100,      
