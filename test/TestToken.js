@@ -3,6 +3,7 @@ const Token = artifacts.require("./Token.sol");
 const name = 'My token';
 const symbol = 'MTO';
 const decimals = 2;
+const totalSupply = 1000 * 10 ** decimals;
 const amount = 100 * 10 ** decimals;
 
 contract("Token", accounts => {
@@ -10,7 +11,7 @@ contract("Token", accounts => {
   let token;
 
   beforeEach('test', async () => {
-    token = await Token.new();
+    token = await Token.new(totalSupply);
   });
   
   describe('Constructor', () => {
