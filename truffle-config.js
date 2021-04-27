@@ -20,7 +20,7 @@ module.exports = {
         //providerOrUrl: 'https://rpc.goerli.mudit.blog/',
         providerOrUrl: 'https://goerli-rpc.mudit.blog/',  //Only for students
         numberOfAddresses: 10,
-        ollingInterval: 10e3,
+        pollingInterval: 10e3,
         chainId: 5,
       }),
       network_id: 5,
