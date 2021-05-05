@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/solangegueiros/sol-token-box#readme",
   "dependencies": {
-    "@openzeppelin/contracts": "2.5.1",
-    "@truffle/hdwallet-provider": "1.2.2"
+    "@openzeppelin/contracts": "4.0.0",
+    "@truffle/hdwallet-provider": "1.3.0"
   }
 }
