@@ -8,6 +8,7 @@
     "build/"
   ],
   "commands": {
+    "Develop local": "truffle develop",
     "Compile contracts": "truffle compile",
     "Migrate contracts": "truffle migrate",
     "Test contracts": "truffle test"

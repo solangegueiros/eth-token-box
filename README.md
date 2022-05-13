@@ -1,10 +1,10 @@
 # Ethereum Truffle Token Box
 
-Truffle box configured to create an ERC20 token using Open Zeppelin smart contracts library and deploy on Görli Ethereum testnet network.
+Truffle box configured to create an ERC20 token using Open Zeppelin smart contracts library and deploy on Görli or Kovan Ethereum testnet network.
 
-#### Updated 2021
-- Open Zeppelin smart contracts 4.0.0 
-- Solidity 0.8.4
+#### Updated 2022
+- Open Zeppelin smart contracts 4.60.0 
+- Solidity 0.8.13
 
 #### Tutorials
 
@@ -53,6 +53,13 @@ This also takes care of installing the necessary dependencies and it can take so
 truffle unbox solangegueiros/eth-token-box
 ```
 
+## Create .env
+
+Make a copy of `.env.example` and named `.env`.
+
+Update your **MNEMONIC** and **RPC_URL** in **.env**
+
+
 ## Compile
 
 Compile the smart contract. 
@@ -78,7 +85,7 @@ truffle test
 
 [Görli Testnet](https://goerli.net/)
 
-### Setup an account & get R-BTC
+### Setup an account & get ETH on Görli
 
 1. Create a wallet
 

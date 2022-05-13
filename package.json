@@ -1,6 +1,6 @@
 {
   "name": "sol-token-box",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Truffle box configured to create a token using Open Zeppelin smart contracts and publish on Goerli testnet",
   "main": "truffle-config.js",
   "directories": {
@@ -17,8 +17,7 @@
     "blockchain",
     "smart contracts",
     "ethereum",
-    "rsk",
-    "rsksmart"
+    "erc20"
   ],
   "author": "Solange Gueiros <solangegueiros@gmail.com> (https://solange.dev)",
   "license": "MIT",
@@ -27,7 +26,8 @@
   },
   "homepage": "https://github.com/solangegueiros/sol-token-box#readme",
   "dependencies": {
-    "@openzeppelin/contracts": "4.0.0",
-    "@truffle/hdwallet-provider": "1.3.0"
+    "@openzeppelin/contracts": "4.6.0",
+    "@truffle/hdwallet-provider": "2.0.8",
+    "dotenv": "16.0.1"
   }
 }
