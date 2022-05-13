@@ -3,7 +3,7 @@
 Truffle box configured to create an ERC20 token using Open Zeppelin smart contracts library and deploy on Görli or Kovan Ethereum testnet network.
 
 #### Updated 2022
-- Open Zeppelin smart contracts 4.60.0 
+- Open Zeppelin smart contracts 4.6.0 
 - Solidity 0.8.13
 
 #### Tutorials
@@ -53,13 +53,6 @@ This also takes care of installing the necessary dependencies and it can take so
 truffle unbox solangegueiros/eth-token-box
 ```
 
-## Create .env
-
-Make a copy of `.env.example` and named `.env`.
-
-Update your **MNEMONIC** and **RPC_URL** in **.env**
-
-
 ## Compile
 
 Compile the smart contract. 
@@ -81,24 +74,41 @@ Run this command on terminal:
 truffle test
 ```
 
+## Requirements to deploy on a network
+
+Before you deploy on a network, you need:
+
+- A wallet with enought ETH to deploy
+- An account at [infura](https://infura.io/)
+
+### Setup an account
+
+1. Create a wallet
+
+The easy way to setup an account is using a web3 wallet injected in the browser
+- [Metamask](https://metamask.io/)
+
+Copy your mnemonic (seed phrase or backup words)
+
+2. Create an account at [infura](https://infura.io/)
+   - Create a project, selecting `Ethereum network`.
+   - Copy the project ID
+
+### Create .env
+
+Make a copy of `.env.example` and named `.env`, located in the folder project.
+
+Update your **MNEMONIC** and **RPC_URL** in **.env**
+
+Save `.env` file.
+
 ## Deploy on Görli - Ethereum testnet network
 
 [Görli Testnet](https://goerli.net/)
 
-### Setup an account & get ETH on Görli
-
-1. Create a wallet
-
-The easy way to setup an account is using a web3 wallet injected in the browser.
-Some options are:
-- [Metamask](https://metamask.io/)
-- [Nifty](https://www.poa.network/for-users/nifty-wallet)
+### Get ETH on Görli
 
 Select the Goerli Network in the web wallet.
-
-2. Update `.secret` file
-
-After create your wallet, update your mnemonic in the file `.secret`, located in the folder project, and save it.
 
 3. Get some ETHs - Faucets
 - [goerli-faucet.slock.it](https://goerli-faucet.slock.it/)
