@@ -11,7 +11,7 @@ contract("Token", accounts => {
   let token;
 
   beforeEach('test', async () => {
-    token = await Token.new(totalSupply);
+    token = await Token.new();
   });
   
   describe('Constructor', () => {
@@ -21,14 +21,24 @@ contract("Token", accounts => {
       assert.equal(response, symbol, 'wrong symbol');
     });
 
-    it("has initial supply", async () => {
+    it("has initial supply equal zero", async () => {
       const response = await token.totalSupply();
-      assert.equal(response, totalSupply, 'initial supply error');
+      assert.equal(response, 0, 'initial supply error');
+    });
+  });
+
+  describe('Mint tokens', () => {
+    it('check total supply after mint', async () => {
+      var balancebefore = await token.totalSupply();
+      await token.mint(accounts[0], totalSupply, { from: accounts[0] })
+      const response = await token.totalSupply();
+      assert.equal(response, totalSupply, 'total supply error');
     });
   });
 
   describe('Transfer', () => {
     it('check balance after transfer', async () => {
+      await token.mint(accounts[0], totalSupply, { from: accounts[0] })
       var balance2before = await token.balanceOf(accounts[2]);
       await token.transfer(accounts[2], amount, { from: accounts[0] })
       var balance2after = await token.balanceOf(accounts[2]);
