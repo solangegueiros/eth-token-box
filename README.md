@@ -2,10 +2,6 @@
 
 Truffle box configured to create an ERC20 token using Open Zeppelin smart contracts library and deploy on Görli or Kovan Ethereum testnet network.
 
-#### Updated 2022
-- Open Zeppelin smart contracts 4.6.0 
-- Solidity 0.8.13
-
 #### Tutorials
 
 - English:
@@ -155,4 +151,3 @@ truffle migrate --network goerli
 ```
 
 The migrate process in a real blockchain takes more time, because Truffle creates some transactions which need to be mined on the blockchain.
-
